@@ -1,0 +1,322 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Poppins, sans-serif;
+
+    height: 100vh;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.login-wrapper {
+    display: grid;
+    grid-template-columns: 55vw 1fr;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.left-pane {
+    grid-column: 1/2;
+    background-color: black;
+    display: grid;
+    position: relative;
+    overflow: hidden;
+    grid-template-rows: 80px minmax(180px, auto) minmax(72px, auto) minmax(290px, auto) 40px minmax(160px, auto);
+}
+.login-header,
+.signinup-container,
+.login-form,
+.divider,
+.social-login-container {
+    position: relative; 
+    z-index: 200;
+}
+.right-pane {
+    grid-column: 2/2;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #6e6e6e;
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative; 
+    z-index: 200;
+}
+
+/* Right Side Image */
+.hero-image {
+    
+    width: 100%;
+    height: auto;
+
+}
+
+/* Left Side Panel here */
+.login-header {
+    grid-row: 2/6;
+    grid-column: 1;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    align-items: left;
+    
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-left: 180px;
+}
+
+.title,
+.subtitle {
+    margin: 0;
+    margin-left: 200px;
+    
+}
+
+.subtitle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.img {
+    height: 84px;
+    width: auto;
+    margin-left: 20px;
+}
+
+.signinup-container {
+    grid-row: 3/6;
+    grid-column: 1;
+
+
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.border-container {
+    padding: 5px 10px;
+    background-color: rgb(48, 48, 48);
+    border: black 2px solid;
+    border-radius: 50px;
+}
+
+.signinup-container .Signin,
+.Signup {
+    text-align: center;
+    flex:1;
+    padding: 20px 160px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    
+}
+
+.Signin {
+    background-color: #EF3D3D;
+    color: white;
+
+}
+
+
+.Signup {
+    background-color: rgb(48, 48, 48);
+    color: white;
+}
+
+.Signup:hover {
+    background-color: White;
+    color: black;
+}
+
+.login-form {
+    grid-row: 4/6;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    z-index: 200;
+    
+}
+
+#email,
+#password {
+    display: flex;
+    align-items: center;
+
+    width: 715.55px;
+    height: 60px;
+    border-radius: 40px;
+    color: rgb(141, 141, 141);
+    background-color: rgb(48, 48, 48);
+    border: 1px solid rgb(68, 68, 68);
+    padding: 5px 20px;
+    font-size: 16px;
+}
+
+#email:hover,
+#password:hover {
+    border: 1px solid white;
+}
+
+
+
+/* #email,
+#password {
+    color: rgb(141, 141, 141);
+    font-size: 16px;
+    margin-left: 10px;
+    background-color: none;
+}
+ */
+.remember-forgot-container {
+    display: flex;
+    width: 735.55px;
+    justify-content: space-between;
+
+}
+
+.remember-me {
+    color: rgb(141, 141, 141);
+    cursor: pointer;
+}
+
+.remember-me:hover {
+    color: white;
+}
+
+.forgot-password {
+    cursor: pointer;
+    color: #EF3D3D;
+
+}
+
+.forgot-password:hover {
+    color: white;
+}
+
+.btn-primary {
+    background-color: #EF3D3D;
+    color: white;
+    width: 735.55px;
+    height: 60px;
+    border-radius: 40px;
+
+    border: 1px solid rgb(68, 68, 68);
+    padding: 5px 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.divider {
+    grid-row: 5/6;
+    grid-column: 1;
+    text-align: center;
+    align-self: center;
+    color: rgb(139, 139, 139);
+}
+
+.social-login-container {
+    grid-row: 6/6;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 10px
+}
+
+.btn-google,
+.btn-apple {
+    margin-top: 10px;
+    width: 735.55px;
+    height: 35px;
+    border-radius: 40px;
+    color: rgb(141, 141, 141);
+    background-color: rgb(59, 59, 59);
+    border: 1px solid rgb(68, 68, 68);
+    padding: 5px 20px;
+    font-size: 16px;
+}
+
+.btn-apple {
+    color: white;
+    background-color: black;
+    border: white 1px solid;
+}
+.btn-apple:hover{
+    background-color: rgb(19, 19, 19);
+    border: rgb(153, 153, 153) 1px solid;
+    
+
+}
+.btn-google {
+    color: black;
+    background-color: white;
+    border: white 1px solid;
+}
+.btn-google:hover {
+    background-color: #e6e6e6;
+    border: none;
+     
+}
+.ellipse {
+    grid: 6/6;
+    position: absolute;
+    top: -100px;
+    left: -300px;
+    width: 1000px;
+    height: auto;
+    z-index: 1;
+    opacity: 1;
+    animation: ellipse-top-move 10s ease-in-out infinite alternate;
+}
+.ellipse2 {
+    grid-column: 1;
+    position: absolute;
+    bottom: 100px;
+    left: 600px;
+    width: 800px;
+    height: auto;
+    z-index: 1;
+    opacity: 1;
+    animation: ellipse-top-move 12s ease-in-out infinite alternate-reverse;
+    
+}
+@keyframes ellipse-top-move {
+    0% { transform: translate(0px, 400px); }
+    50% { transform: translate(100px, 0px); }
+    100% { transform: translate(400px, 0px); }
+
+}
+@media all and (max-width:1440px) {
+    
+}
