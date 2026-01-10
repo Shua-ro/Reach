@@ -19,11 +19,11 @@
     <div class="login-wrapper">
 
         <div class="left-pane">
-            <!-- <div class="login-container"> -->
+            <div class="login-container">
                 <header class="login-header">
                     <div class="logo-container">
-                        <img src="icons/formula-1 1.png" alt="img" class="img">
-                        <span class="brand-text">TITLE</span>
+                        <img src="icons/logo.png" alt="img" class="img">
+                        <span class="brand-text">REACH</span>
                     </div>
                     <h1 class="title">Welcome Back!</h1>
                     <p class="subtitle">We Are Happy to See You Again</p>
@@ -31,8 +31,8 @@
 
                 <div class="signinup-container">
                     <div class="border-container">
-                        <button type="button" class="Signin">Sign in</button>
-                        <button type="button" class="Signup">Sign Up</button>
+                        <button type="button" class="Signin active-btn">Sign in</button>
+                        <button type="button" class="Signup inactive-btn">Sign Up</button>
                     </div>
                 </div>
 
@@ -43,14 +43,24 @@
                             <input type="email" id="email" placeholder="Enter your email" required>
                         </div>
                     </div>
-
+                    <div class="input-group hidden" id="name-group">
+                        <div class="email"> <input type="text" id="full-name" placeholder="Enter your full name">
+                        </div>
+                    </div>
                     <div class="input-group">
                         <div class="password">
                             <input type="password" id="password" placeholder="Enter your password" required>
                         </div>
                     </div>
+                    <!--  -->
 
 
+
+                    <div class="input-group hidden" id="confirm-group">
+                        <div class="password"> <input type="password" id="confirm-password"
+                                placeholder="Confirm your password">
+                        </div>
+                    </div>
 
 
 
@@ -68,7 +78,7 @@
                 </form>
 
                 <div class="divider">
-                    <span class="divider-text">------------------------OR----------------------</span>
+                    <span class="divider-text">OR</span>
                 </div>
 
                 <div class="social-login-container">
@@ -81,16 +91,16 @@
                         Login in with Google
                     </button>
                 </div>
-            <!-- </div> -->
+            </div>
         </div>
 
         <div class="right-pane">
             <img src="img/login-right.jpg" alt="Mercedes F1 Helmet" class="hero-image">
         </div>
-        <img src="img/Ellipse.png" alt="decorative image" class="ellipse">
-        <img src="img/Ellipse.png" alt="decorative image" class="ellipse2">
+
     </div>
 
 </body>
+<script src="login.js"></script>
 
 </html>
