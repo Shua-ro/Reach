@@ -104,7 +104,8 @@ mainBtn.addEventListener('click', (e) => {
 
         
         console.log("Login Successful");
-        window.location.href = 'main.html';
+        window.location.href = 'home.html';
+        
 
     } 
     
@@ -131,7 +132,7 @@ mainBtn.addEventListener('click', (e) => {
         localStorage.setItem('userName', nameVal);
 
         
-        window.location.href = 'main.html';
+        window.location.href = 'home.html';
     }
 });
 
@@ -149,7 +150,7 @@ if (googleBtn) {
         localStorage.setItem('userName', fakeName);
         localStorage.setItem('userEmail', fakeEmail);
 
-        window.location.href = 'main.html';
+        window.location.href = 'home.html';
     });
 }
 
@@ -164,6 +165,6 @@ if (appleBtn) {
         localStorage.setItem('userName', fakeName);
         localStorage.setItem('userEmail', fakeEmail);
 
-        window.location.href = 'main.html';
+        window.location.href = 'home.html';
     });
 }
