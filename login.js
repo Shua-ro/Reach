@@ -10,6 +10,9 @@ const nameField = document.getElementById('name-group');
 const password = document.getElementById('password');
 const confirmPassword = document.getElementById('confirm-password');
 
+const errorElement = document.querySelector('.error');
+const nameS = document.getElementById('nick-name')
+
 signUpTab.addEventListener('click', () => {
 
     signUpTab.classList.remove("active-btn");
@@ -55,9 +58,9 @@ signInTab.addEventListener('click', () => {
 
 
 mainBtn.addEventListener('click', (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
-    const nameEl = document.getElementById('full-name');
+    const nameEl = document.getElementById('nick-name');
     const emailEl = document.getElementById('email');
     const passwordEl = document.getElementById('password');
     const confirmEl = document.getElementById('confirm-password');
@@ -67,71 +70,81 @@ mainBtn.addEventListener('click', (e) => {
     const passVal = passwordEl.value;
     const confirmVal = confirmEl.value;
 
-    
+
     if (!emailVal) {
         alert("Please enter your email!");
         return;
     }
     if (!passVal) {
         alert("Please enter a password!");
+
         return;
     }
 
-    
+
     if (signInTab.classList.contains('active-btn')) {
-        
-        
+
+
         const storedEmail = localStorage.getItem('userEmail');
         const storedPass = localStorage.getItem('userPassword');
 
-        
+
         if (!storedEmail) {
             alert("No account found! Please Sign Up first.");
             return;
         }
 
-        
+
         if (emailVal !== storedEmail) {
             alert("Email not found / incorrect!");
             return;
         }
 
-        
+
         if (passVal !== storedPass) {
             alert("Incorrect password!");
+
             return;
         }
 
-        
+
         console.log("Login Successful");
         window.location.href = 'home.html';
-        
 
-    } 
-    
+
+    }
+
     else {
-        
-        
+
+
         if (!nameVal) {
-            alert("Please enter your full name!");
+            alert("Please enter your name!");
+            return;
+        }
+        if (nameVal.length > 10) {
+
+            errorElement.classList.remove('hidden');
+
+            /* alert("Name is too long!"); */
+
             return;
         }
 
-        
+
         if (passVal !== confirmVal) {
             alert("Passwords do not match!");
-            confirmEl.value = ""; 
-            return; 
+            confirmEl.value = "";
+            return;
         }
 
-        
+
         console.log("Creating new user:", nameVal);
-        
+
         localStorage.setItem('userEmail', emailVal);
         localStorage.setItem('userPassword', passVal);
         localStorage.setItem('userName', nameVal);
 
-        
+
         window.location.href = 'home.html';
     }
 });
@@ -167,4 +180,17 @@ if (appleBtn) {
 
         window.location.href = 'home.html';
     });
+}
+
+if(nameS) {
+    nameS.addEventListener('focus', () => {
+        errorElement.classList.add('hidden');
+    });
+    
+}
+if(nameS) {
+    nameS.addEventListener('input', () => {
+        errorElement.classList.add('hidden');
+    });
+    
 }
