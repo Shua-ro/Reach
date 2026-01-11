@@ -150,6 +150,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
     padding-left: 50px;
     max-width: 600px;
 }
@@ -186,10 +187,12 @@
     .nav-links {
         gap: 0px;
     }
+
     .navbar {
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .nav-actions {
         gap: 5px;
     }
@@ -214,7 +217,7 @@
         display: none;
     }
 
-    
+
 
     .tabletnav-container {
         display: flex;
@@ -278,4 +281,22 @@
 
 
 
+}
+
+@media (max-width:576px) {
+    .hero-content {
+        align-self: center;
+        width: 100vw;
+        height: 50vh;
+        padding: 0 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+        text-align: justify;
+    }
 }
