@@ -210,19 +210,35 @@
 .tabletnav-container {
     display: none;
 }
+/* .goback-center{
+    
+    z-index: 1000;
+    grid-row: 1;
+    transform: translate(0,0);
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    
+} */
 .goback{
+    
     display: none;
 }
 .goback.active {
     display: flex;
-    grid-row: 1;
+    position: fixed;
     
     top:clamp(5vh, 25vh, 50vh);
-    position: absolute;
+    
     padding: 50px;
     align-self: center;
-    z-index: 1000;
     
+    z-index: 1000;
+    grid-row: 1;
+   
+
 }
 
 .go-back-container {
@@ -284,7 +300,9 @@ button.yes-btn{
 }
 /* Mobile Breakpoints with the hamburger */
 @media (max-width: 900px) {
-
+    body::-webkit-scrollbar {
+        display: none;
+    }
     .nav-links,
     .btn-book,
     .user-icon {
