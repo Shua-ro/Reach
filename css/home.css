@@ -5,10 +5,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
+html, body{
+    min-width: 320px;
+    overflow-x: auto;
+}
 .main-layout {
     display: grid;
-    grid-template-rows: minmax(100vh, auto) auto;
+    grid-template-rows: minmax(100vh, auto);
     width: 100%;
 }
 
@@ -332,9 +335,13 @@ button.yes-btn{
         background-color: black;
         z-index: 99;
 
-
+        
         transform: translateX(100%);
         transition: transform 0.4s ease-in-out;
+
+        overflow-y: auto;
+        padding-top: 60px;
+        padding-bottom: 20px;
     }
 
 
