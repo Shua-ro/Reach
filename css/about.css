@@ -377,11 +377,15 @@ button.yes-btn {
     display: flex;
     align-self: flex-end;
     width: 100%;
+    border-radius: 40px;
 }
+
 .orangeCity img{
+    
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     height: auto;
+    border-radius: 20px;
 }
 .about-left h2 {
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
@@ -390,8 +394,9 @@ button.yes-btn {
 }
 .orangeJapan img{
     width: 100%;
-   max-width: 300px;
+   max-width: 350px;
    height: auto;
+    border-radius: 20px;
 }
 .img-placeholder-large {
     background-color: #D9D9D9;
@@ -519,6 +524,9 @@ button.yes-btn {
 }
 
 .left-secondrow {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     grid-column: 1;
     grid-row: 1;
 }
