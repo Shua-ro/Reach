@@ -564,7 +564,7 @@ button.yes-btn {
     }
 
     .main-layout {
-        grid-template-rows: 40vh auto 100vh;
+        grid-template-rows: 40vh auto minmax(100vh, auto);
     }
 
     .tabletnav-container {
@@ -652,8 +652,22 @@ button.yes-btn {
     .right-secondrow {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-content: flex-end;
     }
+    .title-gateway {
+    font-size: 2rem;
+    }
+    .fistbump{
+        
+        width: 400px;
+        height: auto;
+    }
+    .Know-more-btn h1{
+        font-size: 1rem;
+        border-radius: 20px;
+    }
+   
 }
 
 @media (max-width:576px) {
