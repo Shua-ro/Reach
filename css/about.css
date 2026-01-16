@@ -571,7 +571,7 @@ button.yes-btn {
         display: flex;
         flex-direction: column;
         justify-content: center;
-
+        visibility: hidden;
         align-items: center;
         gap: 40px;
 
@@ -596,6 +596,7 @@ button.yes-btn {
 
     .tabletnav-container.active {
         transform: translateX(0);
+        visibility: visible;
         z-index: 500;
     }
 
@@ -659,8 +660,8 @@ button.yes-btn {
     font-size: 2rem;
     }
     .fistbump{
-        
-        width: 400px;
+        width: 100%;
+        max-width: 400px;
         height: auto;
     }
     .Know-more-btn h1{
