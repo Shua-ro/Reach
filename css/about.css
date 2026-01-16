@@ -11,7 +11,9 @@ body {
 
 }
 
-
+button{
+    transition: 0.3s;
+}
 
 .hero-section {
     grid-row: 1;
@@ -107,10 +109,11 @@ body {
 
 .btn-book:hover,
 .btn-bookH:hover {
-    background-color: black;
-    color: #f4f4f4;
-    border: white 1px solid;
-    box-shadow: #ffffff2c 2px 4px 15px;
+    background-color: white;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 59, 59, 0.4);
+    
 
 }
 
@@ -174,6 +177,17 @@ body {
     background-color: white;
 }
 
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
 
 .hero-content {
     flex: 1;
@@ -347,7 +361,7 @@ button.yes-btn {
     color: black;
     padding: 50px clamp(20px, 5vw, 100px);
     display: flex;
-    
+
     justify-content: center;
 }
 
@@ -380,24 +394,27 @@ button.yes-btn {
     border-radius: 40px;
 }
 
-.orangeCity img{
-    
+.orangeCity img {
+
     width: 100%;
     max-width: 350px;
     height: auto;
     border-radius: 20px;
 }
+
 .about-left h2 {
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     font-weight: 800;
     line-height: 1.2;
 }
-.orangeJapan img{
+
+.orangeJapan img {
     width: 100%;
-   max-width: 350px;
-   height: auto;
+    max-width: 350px;
+    height: auto;
     border-radius: 20px;
 }
+
 .img-placeholder-large {
     background-color: #D9D9D9;
     width: 100%;
@@ -490,7 +507,7 @@ button.yes-btn {
     color: #ffffff;
     font-weight: 400;
     text-align: justify;
-    text-shadow: #000 1px 2px 10px; 
+    text-shadow: #000 1px 2px 10px;
 }
 
 .Know-more-btn {
@@ -516,11 +533,20 @@ button.yes-btn {
     padding: 20px 20px;
 }
 
+.Know-more-btn h1:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-2px);
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 59, 59, 0.4);
+    transition: 0.3s;
+}
+
 .fistbump {
     display: flex;
     justify-self: center;
     align-self: center;
-    
+
     width: 100%;
     max-width: 500px;
     height: auto;
@@ -539,7 +565,7 @@ button.yes-btn {
 .right-secondrow {
     align-content: center;
     grid-column: 2;
-    
+
 }
 
 /* --- RESPONSIVE FIX (Stack columns on Tablet/Mobile) --- */
@@ -650,25 +676,29 @@ button.yes-btn {
     .right-secondrow {
         grid-column: 1;
     }
+
     .right-secondrow {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-end;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-end;
     }
+
     .title-gateway {
-    font-size: 2rem;
+        font-size: 2rem;
     }
-    .fistbump{
+
+    .fistbump {
         width: 100%;
         max-width: 400px;
         height: auto;
     }
-    .Know-more-btn h1{
+
+    .Know-more-btn h1 {
         font-size: 1rem;
         border-radius: 20px;
     }
-   
+
 }
 
 @media (max-width:576px) {
