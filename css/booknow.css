@@ -378,15 +378,16 @@ button.yes-btn {
     gap: 40px;
 }
  */
- .gal-container{
-    max-width: 1400px;
+.gal-container {
+    padding: 0 40px;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: clamp(20px,5vw,400px);
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
- }
+}
+
 .top-design {
     display: flex;
     justify-content: space-between;
@@ -399,10 +400,8 @@ button.yes-btn {
     font-size: 1.1rem;
     font-weight: 700;
 }
-.gal-context{
-    
 
-}
+.gal-context {}
 
 .gal-context img {
     width: 100%;
@@ -452,9 +451,11 @@ button.yes-btn {
 .discount-price-book button {
     border: none;
     background-color: transparent;
-    font-size: 2rem;
+    font-size: 1rem;
     color: white;
     font-weight: bold;
+    cursor: pointer;
+    
 
 }
 
@@ -465,10 +466,16 @@ button.yes-btn {
     justify-content: center;
     padding: 10px 50px;
     background-color: #EF3D3D;
-
+    height: 40px;
     border-radius: 40px;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: 0.2s ease-in-out ;
 }
-
+.book-container:hover{
+    background-color: rgb(0, 0, 0);
+    
+}
 .discount-price p {
     text-decoration: line-through;
 }
@@ -1024,11 +1031,11 @@ button.yes-btn {
 }
 
 .Special-text {
+    text-align: center;
     
-    display: flex;
-    justify-self: center;
-    width: 90%;
-    margin-bottom: 30px;
+    font-size: 4rem;
+    font-weight: bolder;
+    margin-bottom: 100px;
     color: #EF3D3D;
 }
 
@@ -1049,6 +1056,10 @@ button.yes-btn {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
     width: 90%;
     background-color: #ebebeb;
     padding: 30px 40px;
@@ -1200,7 +1211,7 @@ button.yes-btn {
 .places-with-ratings {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
+
     gap: 30px;
     padding: 0 40px 100px;
 
@@ -1287,8 +1298,8 @@ button.yes-btn {
     text-decoration: none;
     font-weight: 700;
 }
-.holder
-.gal-container {
+
+.holder .gal-container {
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -1297,19 +1308,21 @@ button.yes-btn {
     justify-content: center;
     flex-wrap: wrap;
 }
-.something{
+
+.something {
     display: flex;
     align-content: center;
     justify-content: center;
     flex-direction: column;
 }
+
 .galleries {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    
+
 }
 
 @media (max-width: 900px) {
@@ -1324,14 +1337,12 @@ button.yes-btn {
     .Tent-Camping {
         width: 100%;
     }
-
+}
     .places-with-ratings {
         grid-template-columns: 1fr 1fr;
     }
-    .Special-text{
-        width: 250px;
-    }
-}
+
+    
 
 @media (max-width: 576px) {
     .places-with-ratings {
@@ -1368,7 +1379,7 @@ button.yes-btn {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        visibility: hidden;
+        
         align-items: center;
         gap: 40px;
 
@@ -1393,7 +1404,7 @@ button.yes-btn {
 
     .tabletnav-container.active {
         transform: translateX(0);
-        visibility: visible;
+        
         z-index: 500;
     }
 
@@ -1514,7 +1525,7 @@ button.yes-btn {
         padding: 0 20px;
     }
 
-    h .centered-title {
+    .centered-title {
         padding-bottom: 50px;
         justify-content: center;
     }
@@ -1532,5 +1543,7 @@ button.yes-btn {
     .collection-grid {
         grid-template-columns: 1fr;
     }
-
+    .Special-text{
+        font-size: 3rem;
+    }
 }

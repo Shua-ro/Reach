@@ -186,7 +186,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    flex-wrap: wrap;
+    width: 100%;
     padding-left: 50px;
     max-width: 600px;
 }
@@ -195,7 +196,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
     font-weight: 900;
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 1.1;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -321,9 +322,11 @@ section {
     padding: 80px clamp(20px, 5vw, 50px);
     background-color: white;
 }
-.section-plans{
+
+.section-plans {
     background-color: #f3f3f3;
 }
+
 .find-best-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -414,15 +417,16 @@ section {
     height: 200px;
     border-radius: 20px;
     overflow: hidden;
-    
+
 }
 
-.search-input input{
+.search-input input {
     outline: none;
 }
+
 .dest-card.tall {
     height: 240px;
-    
+
 }
 
 .dest-card img {
@@ -722,23 +726,26 @@ section {
     text-decoration: none;
     color: #666;
 }
+
 /* --- RESPONSIVE: PAGE CONTENT & LAYOUT (Max-Width: 900px) --- */
 @media (max-width: 900px) {
 
     /* 1. Main Layout Grid Fix */
     .main-layout {
         /* Switch from fixed row heights to auto flow */
-        grid-template-rows: minmax(100vh, auto) auto; 
+        grid-template-rows: minmax(100vh, auto) auto;
     }
 
     /* 2. Home Page: Search & Destinations */
     .destination-grid {
-        grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
+        grid-template-columns: 1fr 1fr;
+        /* 2 columns on tablet */
     }
 
     /* 3. Home Page: Easy Travel Section */
     .easy-container {
-        grid-template-columns: 1fr; /* Stack text over image */
+        grid-template-columns: 1fr;
+        /* Stack text over image */
         text-align: center;
     }
 
@@ -753,7 +760,8 @@ section {
     }
 
     .easy-visual {
-        order: -1; /* Puts image on top of text */
+        order: -1;
+        /* Puts image on top of text */
     }
 
     /* 4. Footer Adjustments */
@@ -792,8 +800,8 @@ section {
 }
 
 @media (max-width: 900px) {
-    
-    
+
+
     .nav-links,
     .btn-book,
     .user-icon,
@@ -801,17 +809,17 @@ section {
         display: none;
     }
 
-    
+
     body::-webkit-scrollbar {
         display: none;
     }
 
-    
+
     .navbar {
         padding: 20px;
     }
 
-    
+
     .hamburger-container {
         display: flex;
         position: fixed;
@@ -836,7 +844,7 @@ section {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    
+
     .tabletnav-container {
         display: flex;
         flex-direction: column;
@@ -844,7 +852,7 @@ section {
         align-items: center;
         gap: 40px;
         /* visibility: hidden;  */
-        
+
         position: fixed;
         top: 0;
         left: 0;
@@ -852,7 +860,7 @@ section {
         height: 100vh;
         background-color: black;
         z-index: 99;
-        
+
         transform: translateX(100%);
         transition: transform 0.4s ease-in-out;
         overflow-y: auto;
@@ -866,7 +874,7 @@ section {
         /* visibility: visible; */
     }
 
-    
+
     .nav-linksH {
         display: flex;
         flex-direction: column;
@@ -881,7 +889,24 @@ section {
         font-weight: bold;
         text-transform: uppercase;
     }
+
+    .main-texts {
+        margin-left: 5px;
+        width: 100vw;
+    }
+
+    .main-texts h1 {
+        width: 100%;
+        font-size: 3rem;
+        padding: 0;
+    }
+
+    .main-texts p {
+        font-size: 0.8rem;
+        padding: 0;
+    }
 }
+
 @media (max-width:576px) {
     body::-webkit-scrollbar {
         display: none;
@@ -902,5 +927,25 @@ section {
         font-size: 0.9rem;
 
     }
+
+    .main-texts {
+        flex: 1;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+        max-width: 600px;
+    }
+    .main-texts h1{
+        text-align: center;
+    }
+    .main-texts p{
+        text-align: center;
+    }
+
 
 }

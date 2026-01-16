@@ -619,7 +619,7 @@ button.yes-btn {
 
 .visuals {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     width: 100%;
     gap: 20px;
@@ -639,12 +639,12 @@ button.yes-btn {
     text-align: center;
     padding: 40px 20px;
     border-radius: 200px;
-
+    
     border: 1px solid rgba(255, 255, 255, 0.2);
 
     transition: 0.4s ease-in-out;
     min-width: 220px;
-
+max-width: 300px;
     cursor: pointer;
 }
 
@@ -679,7 +679,7 @@ button.yes-btn {
 
 .visual-item.active .icon-circle {
     color: black;
-    
+
 }
 
 
@@ -695,9 +695,9 @@ button.yes-btn {
 
 .site-footer {
     grid-row: 5;
-    
+
     background-color: #E5E5E5;
-    
+
     color: #333;
     padding: 60px clamp(20px, 5vw, 50px) 20px;
     font-size: 0.9rem;
@@ -869,7 +869,7 @@ button.yes-btn {
         display: flex;
         flex-direction: column;
         justify-content: center;
-
+        
         align-items: center;
         gap: 40px;
 
@@ -966,10 +966,10 @@ button.yes-btn {
         height: auto;
     }
 
-    .Know-more-btn h1 {
+    /* .Know-more-btn h1 {
         font-size: 1rem;
         border-radius: 20px;
-    }
+    } */
 
 }
 
