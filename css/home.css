@@ -13,12 +13,12 @@ body {
 
 .main-layout {
     display: grid;
-    grid-template-rows: minmax(100vh, auto);
+    grid-template-rows: minmax(100vh, auto) auto auto auto;
     width: 100%;
 }
 
 
-.hero-section {
+.fullscreen-page {
     grid-row: 1;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/homepage-img.png');
     background-size: cover;
@@ -87,7 +87,7 @@ body {
     color: #000;
 }
 
-.nav-actions {
+.rightside-navbar {
     display: flex;
     flex: 1;
     align-items: center;
@@ -108,14 +108,15 @@ body {
     /* margin-right: 40px; */
     white-space: nowrap;
     box-shadow: #ff3b3b8f 2px 4px 15px;
+    transition: 0.3s ease-in-out;
 }
 
 .btn-book:hover,
 .btn-bookH:hover {
-    background-color: black;
-    color: #f4f4f4;
-    border: white 1px solid;
-    box-shadow: #ffffff2c 2px 4px 15px;
+    background-color: white;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 59, 59, 0.4);
 
 }
 
@@ -180,7 +181,7 @@ body {
 }
 
 
-.hero-content {
+.main-texts {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -190,7 +191,7 @@ body {
     max-width: 600px;
 }
 
-.hero-content h1 {
+.main-texts h1 {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
     font-weight: 900;
@@ -200,7 +201,7 @@ body {
     text-transform: uppercase;
 }
 
-.hero-content p {
+.main-texts p {
     font-size: 0.9rem;
     line-height: 1.6;
     opacity: 0.9;
@@ -314,54 +315,513 @@ button.yes-btn {
 
 }
 
-/* Mobile Breakpoints with the hamburger */
+
+
+section {
+    padding: 80px clamp(20px, 5vw, 50px);
+    background-color: white;
+}
+.section-plans{
+    background-color: #f3f3f3;
+}
+.find-best-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.find-best-text {
+    text-align: center;
+    max-width: 600px;
+}
+
+.find-best-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.find-best-text span {
+    color: #ff3b3b;
+}
+
+.find-best-text p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+.search {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #5f5f5f;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.search-input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    gap: 10px;
+}
+
+.search-input input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-btn {
+    background-color: #EF3D3D;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 200;
+
+}
+
+.search-btn:hover {
+    background-color: black;
+    transform: none;
+    box-shadow: #c9c9c9 3px 3px 15px;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.dest-card {
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+
+.search-input input{
+    outline: none;
+}
+.dest-card.tall {
+    height: 240px;
+    
+}
+
+.dest-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.dest-card:hover img {
+    transform: scale(1.2);
+}
+
+
+.theBest {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.theBest-container {
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.219);
+    transition: 0.3s;
+    max-width: 320px;
+}
+
+.theBest-container:hover {
+    transform: translateY(-10px);
+}
+
+.place-img {
+    height: 200px;
+    width: 100%;
+}
+
+.place-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.theBest-text {
+    padding: 20px;
+}
+
+.text-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.text-top h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.text-top .price {
+    font-weight: 800;
+    color: #ff3b3b;
+    font-size: 1.1rem;
+}
+
+.text-bott {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* --- SECTION 3: EASY TRAVEL --- */
+.section-easy {
+    background-color: #fff;
+    padding-top: 20px;
+}
+
+.easy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.easy-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.easy-text h2 span {
+    color: #ff3b3b;
+}
+
+.easy-text p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.easy-features {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.ef-item h4 {
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.ef-item p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.explore-btn {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid #ff3b3b;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    color: #ff3b3b;
+}
+
+.easy-visual img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.site-footer {
+    grid-row: 5;
+    /* This places it after the black section */
+    background-color: #E5E5E5;
+    /* Light grey background like image */
+    color: #333;
+    padding: 60px clamp(20px, 5vw, 50px) 20px;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ccc;
+    /* The line separating the bottom bar */
+}
+
+/* Columns */
+.footer-columns {
+    flex: 1;
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Specific Width for the first column (Logo/Subscribe) */
+.brand-col {
+    flex: 1.5;
+    min-width: 250px;
+}
+
+.footer-logo img {
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-columns h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.footer-columns ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-columns ul li a {
+    text-decoration: none;
+    color: #555;
+    transition: 0.2s;
+}
+
+.footer-columns ul li a:hover {
+    color: #EF3D3D;
+    /* Brand Red Hover */
+    padding-left: 5px;
+}
+
+/* Subscribe Form Styling */
+.foot-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.foot-form input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 10px 0;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.foot-form button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    width: max-content;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.foot-form button:hover {
+    background-color: #EF3D3D;
+}
+
+/* Contact & Socials */
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-circle {
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.social-circle:hover {
+    background-color: #EF3D3D;
+    transform: translateY(-3px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    max-width: 1400px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.bottom-links {
+    display: flex;
+    gap: 20px;
+}
+
+.bottom-links a {
+    text-decoration: none;
+    color: #666;
+}
+/* --- RESPONSIVE: PAGE CONTENT & LAYOUT (Max-Width: 900px) --- */
 @media (max-width: 900px) {
-    body::-webkit-scrollbar {
-        display: none;
+
+    /* 1. Main Layout Grid Fix */
+    .main-layout {
+        /* Switch from fixed row heights to auto flow */
+        grid-template-rows: minmax(100vh, auto) auto; 
     }
 
+    /* 2. Home Page: Search & Destinations */
+    .destination-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
+    }
+
+    /* 3. Home Page: Easy Travel Section */
+    .easy-container {
+        grid-template-columns: 1fr; /* Stack text over image */
+        text-align: center;
+    }
+
+    .easy-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .easy-text p {
+        max-width: 100%;
+    }
+
+    .easy-visual {
+        order: -1; /* Puts image on top of text */
+    }
+
+    /* 4. Footer Adjustments */
+    .site-footer {
+        grid-row: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* 5. Legacy/About Page Elements (If used on Home) */
+    .third-row {
+        grid-row: auto;
+    }
+
+    .visuals {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .visual-item {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 30px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    
+    
     .nav-links,
     .btn-book,
-    .user-icon {
-        display: none;
-    }
-
+    .user-icon,
     .user-container p {
         display: none;
     }
 
-
-
-    .tabletnav-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        align-items: center;
-        gap: 40px;
-
-
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: black;
-        z-index: 99;
-
-
-        transform: translateX(100%);
-        transition: transform 0.4s ease-in-out;
-
-        overflow-y: auto;
-        padding-top: 60px;
-        padding-bottom: 20px;
+    
+    body::-webkit-scrollbar {
+        display: none;
     }
 
+    
+    .navbar {
+        padding: 20px;
+    }
 
-    .tabletnav-container.active {
-        transform: translateX(0);
-        z-index: 500;
+    
+    .hamburger-container {
+        display: flex;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        z-index: 900;
+    }
+
+    .hamburger {
+        display: flex;
     }
 
     .hamburger.active .bar:nth-child(1) {
@@ -376,6 +836,37 @@ button.yes-btn {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    
+    .tabletnav-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        /* visibility: hidden;  */
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        z-index: 99;
+        
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+        overflow-y: auto;
+        padding-top: 60px;
+        padding-bottom: 20px;
+    }
+
+    .tabletnav-container.active {
+        transform: translateX(0);
+        z-index: 500;
+        /* visibility: visible; */
+    }
+
+    
     .nav-linksH {
         display: flex;
         flex-direction: column;
@@ -390,29 +881,7 @@ button.yes-btn {
         font-weight: bold;
         text-transform: uppercase;
     }
-
-
-    .hamburger-container {
-        display: flex;
-        position: fixed;
-        top: 30px;
-        right: 30px;
-        z-index: 900;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .navbar {
-        padding: 20px;
-    }
-
-
-
-
 }
-
 @media (max-width:576px) {
     body::-webkit-scrollbar {
         display: none;
@@ -429,7 +898,7 @@ button.yes-btn {
         font-size: 2.5rem;
     }
 
-    .hero-section p {
+    .fullscreen-page p {
         font-size: 0.9rem;
 
     }

@@ -195,7 +195,7 @@ button {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-self: center;
+    justify-self: flex-start;
 
     padding-left: 50px;
     max-width: 600px;
@@ -328,10 +328,10 @@ button.yes-btn {
 }
 
 
-.fullscreen-page.about-hero {
+.fullscreen-page.fs {
     grid-row: 1;
 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/gallery-bg.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/mountfuji.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -344,11 +344,10 @@ button.yes-btn {
 .centered-title {
     flex: 1;
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
     padding: 0;
     padding-bottom: 45px;
+    padding-left: 20px;
 
 
 }
@@ -356,7 +355,7 @@ button.yes-btn {
 .centered-title-container {
     flex: 1;
     display: flex;
-    align-self: center;
+
 }
 
 .Main-content {
@@ -370,15 +369,24 @@ button.yes-btn {
 
 
 
-.gal-container {
+/* .gal-container {
     max-width: 1400px;
-    margin: 100px auto 100px;
+    margin: 10px auto 100px;
     padding: 0 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
-
+ */
+ .gal-container{
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+ }
 .top-design {
     display: flex;
     justify-content: space-between;
@@ -390,6 +398,10 @@ button.yes-btn {
 .top-design h3 {
     font-size: 1.1rem;
     font-weight: 700;
+}
+.gal-context{
+    
+
 }
 
 .gal-context img {
@@ -409,6 +421,106 @@ button.yes-btn {
     font-size: 0.85rem;
     color: #666;
     margin-top: 5px;
+    min-height: 50px;
+}
+
+.callendar-slot {
+    display: flex;
+    gap: 50px;
+    min-height: 30px;
+}
+
+.callendar-stuff,
+.slot-stuff {
+    display: flex;
+    gap: 5px
+}
+
+.callendar-slot img {
+    width: 25px;
+    height: auto;
+    margin: 0;
+}
+
+.discount-price-book {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.discount-price-book button {
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+
+}
+
+.book-container {
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 10px 50px;
+    background-color: #EF3D3D;
+
+    border-radius: 40px;
+}
+
+.discount-price p {
+    text-decoration: line-through;
+}
+
+.bar {
+    display: flex;
+    justify-content: center;
+
+}
+
+.places {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 93%;
+    background-color: #ebebeb;
+    padding: 50px;
+    border-radius: 40px;
+    text-align: center;
+
+
+}
+
+.select-date,
+.Person,
+.Tent-Camping {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin-top: 10px;
+
+}
+
+.select-date,
+.Person,
+.accommodation,
+.Tent-Camping {
+    min-height: 50px;
+}
+
+.Person img {
+    width: 50px;
+    height: auto;
+}
+
+.arrow {
+    font-size: 30px;
 }
 
 .Welcome {
@@ -857,6 +969,375 @@ button.yes-btn {
     color: #666;
 }
 
+.search {
+
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #5f5f5f;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.container-search {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    gap: 10px;
+}
+
+.search-input input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-btn {
+    background-color: #EF3D3D;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 200;
+
+}
+
+.search-btn:hover {
+    background-color: black;
+    transform: none;
+    box-shadow: #c9c9c9 3px 3px 15px;
+}
+
+.Special-text {
+    
+    display: flex;
+    justify-self: center;
+    width: 90%;
+    margin-bottom: 30px;
+    color: #EF3D3D;
+}
+
+
+.main-booking-content {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+    margin-bottom: 50px;
+}
+
+.bar {
+    display: flex;
+    justify-content: center;
+}
+
+.places {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 90%;
+    background-color: #ebebeb;
+    padding: 30px 40px;
+    border-radius: 20px;
+}
+
+.places h2 {
+    font-size: 0.8rem;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.select-date,
+.Person,
+.Tent-Camping {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    min-width: 180px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.select-date p,
+.Person p,
+.Tent-Camping p {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.select-date img,
+.Person img {
+    width: 18px;
+    height: auto;
+}
+
+.check-avail-btn {
+    background-color: #c2451e;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.check-avail-btn:hover {
+    background-color: black;
+}
+
+
+.organizer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin-bottom: 30px;
+}
+
+.organizer h1 {
+    font-size: 1rem;
+    color: #333;
+}
+
+.sort-by span {
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.places-with-ratings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 40px 100px;
+}
+
+.result-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.result-card:hover {
+    transform: translateY(-10px);
+}
+
+.result-card .picture {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.result-card .informations {
+    padding: 20px;
+}
+
+.stars {
+    color: #ffb400;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.result-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.loc {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.price-line {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.price-line span {
+    color: #EF3D3D;
+    font-size: 1.1rem;
+}
+
+.res-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.details-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.places-with-ratings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    gap: 30px;
+    padding: 0 40px 100px;
+
+    background-color: #FAF9F6;
+
+}
+
+
+.result-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.result-card:hover {
+    transform: translateY(-10px);
+
+}
+
+
+.result-card .picture {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.result-card .informations {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.stars {
+    color: #ffb400;
+
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.result-card h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.loc {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.price-line {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.price-line span {
+    color: #EF3D3D;
+
+    font-size: 1.2rem;
+}
+
+.res-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 15px;
+    padding-top: 15px;
+    color: #777;
+    font-size: 0.8rem;
+}
+
+.details-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+}
+.holder
+.gal-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 0 40px 60px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.something{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.galleries {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+@media (max-width: 900px) {
+    .places {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .select-date,
+    .Person,
+    .Tent-Camping {
+        width: 100%;
+    }
+
+    .places-with-ratings {
+        grid-template-columns: 1fr 1fr;
+    }
+    .Special-text{
+        width: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .places-with-ratings {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media (max-width: 900px) {
     body::-webkit-scrollbar {
@@ -881,7 +1362,7 @@ button.yes-btn {
         grid-template-rows: 40vh auto minmax(100vh, auto);
     }
 
-  
+
 
     .tabletnav-container {
         display: flex;
@@ -1001,7 +1482,7 @@ button.yes-btn {
         grid-template-columns: 1fr 1fr;
     }
 
-   
+
     .site-footer {
         grid-row: auto;
     }
@@ -1027,14 +1508,15 @@ button.yes-btn {
 
 
     .main-texts {
-        align-items: center;
+        align-items: left;
         width: 100%;
-        justify-content: center;
+        justify-content: left;
         padding: 0 20px;
     }
 
-    .centered-title {
+    h .centered-title {
         padding-bottom: 50px;
+        justify-content: center;
     }
 
     .main-texts h1 {
