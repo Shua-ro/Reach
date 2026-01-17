@@ -97,8 +97,8 @@ button {
 
 .btn-book,
 .btn-bookH {
-    background-color: #ff3b3b;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     padding: 10px clamp(10px, 2vw, 20px);
     border-radius: 30px;
     text-decoration: none;
@@ -107,9 +107,10 @@ button {
     white-space: nowrap;
     box-shadow: #ff3b3b8f 2px 4px 15px;
     transition: 0.3s ease-in-out;
+    pointer-events: none;
 }
 
-.btn-book:hover,
+/* .btn-book:hover,
 .btn-bookH:hover {
     background-color: white;
     color: black;
@@ -117,7 +118,7 @@ button {
     box-shadow: 0 5px 15px rgba(255, 59, 59, 0.4);
 
 
-}
+} */
 
 .profiletab {
     display: flex;
@@ -382,7 +383,7 @@ button.yes-btn {
     padding: 0 40px;
     display: flex;
     flex-direction: row;
-    gap: clamp(20px,5vw,400px);
+    gap: clamp(20px, 5vw, 400px);
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
@@ -455,7 +456,7 @@ button.yes-btn {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    
+
 
 }
 
@@ -463,6 +464,7 @@ button.yes-btn {
 
     display: flex;
     align-content: center;
+    align-items: center;
     justify-content: center;
     padding: 10px 50px;
     background-color: #EF3D3D;
@@ -470,12 +472,14 @@ button.yes-btn {
     border-radius: 40px;
     align-self: flex-end;
     cursor: pointer;
-    transition: 0.2s ease-in-out ;
+    transition: 0.2s ease-in-out;
 }
-.book-container:hover{
+
+.book-container:hover {
     background-color: rgb(0, 0, 0);
-    
+
 }
+
 .discount-price p {
     text-decoration: line-through;
 }
@@ -994,6 +998,8 @@ button.yes-btn {
     align-content: center;
     justify-content: center;
     padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 20px;
 }
 
@@ -1010,6 +1016,7 @@ button.yes-btn {
     background: transparent;
     width: 100%;
     font-family: 'Poppins', sans-serif;
+    outline: none;
 }
 
 .search-btn {
@@ -1020,7 +1027,7 @@ button.yes-btn {
     border-radius: 35px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 200;
+
 
 }
 
@@ -1032,10 +1039,10 @@ button.yes-btn {
 
 .Special-text {
     text-align: center;
-    
+
     font-size: 4rem;
     font-weight: bolder;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     color: #EF3D3D;
 }
 
@@ -1140,11 +1147,21 @@ button.yes-btn {
     padding: 0 40px 100px;
 }
 
+.places-with-ratings.hidden {
+    display: none;
+}
+
+.result-card.hidden {
+    display: none;
+}
+
 .result-card {
-    background: white;
+    background-color: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
     border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    overflow: visible;
+    box-shadow: none;
     transition: 0.3s;
 }
 
@@ -1156,10 +1173,17 @@ button.yes-btn {
     height: 200px;
     background-size: cover;
     background-position: center;
+    border-radius: 20px;
 }
 
 .result-card .informations {
     padding: 20px;
+    transform: translate(5%, -20px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    
+    width: 90%;
+    background-color: white;
+    border-radius: 30px;
 }
 
 .stars {
@@ -1194,6 +1218,7 @@ button.yes-btn {
 .res-footer {
     display: flex;
     justify-content: space-between;
+
     align-items: center;
     border-top: 1px solid #eee;
     padding-top: 15px;
@@ -1205,12 +1230,13 @@ button.yes-btn {
     color: #333;
     text-decoration: none;
     font-weight: bold;
+
 }
 
 
 .places-with-ratings {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
 
     gap: 30px;
     padding: 0 40px 100px;
@@ -1221,7 +1247,7 @@ button.yes-btn {
 
 
 .result-card {
-    background: white;
+    background: transparent;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -1237,11 +1263,6 @@ button.yes-btn {
 }
 
 
-.result-card .picture {
-    height: 220px;
-    background-size: cover;
-    background-position: center;
-}
 
 
 .result-card .informations {
@@ -1262,12 +1283,14 @@ button.yes-btn {
     color: #333;
     margin-bottom: 5px;
     line-height: 1.3;
+    min-height: 50px;
 }
 
 .loc {
     font-size: 0.85rem;
     color: #888;
     margin-bottom: 12px;
+    min-height: 40px;
 }
 
 .price-line {
@@ -1291,12 +1314,16 @@ button.yes-btn {
     padding-top: 15px;
     color: #777;
     font-size: 0.8rem;
+
 }
 
 .details-link {
     color: #333;
     text-decoration: none;
     font-weight: 700;
+    display: flex;
+    margin-top: 20px;
+    justify-self: flex-end;
 }
 
 .holder .gal-container {
@@ -1325,6 +1352,58 @@ button.yes-btn {
 
 }
 
+
+.results-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 50px;
+
+}
+
+
+.results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+
+    background-color: #e0e0e0;
+    color: #333;
+    text-decoration: none;
+
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+
+}
+
+
+.results:hover {
+    background-color: #d4d4d4;
+
+}
+
+
+.results.active {
+    background-color: #c2451e;
+    color: white;
+    pointer-events: none;
+
+}
+
+
+.results.arrow {
+    font-size: 1.1rem;
+    padding-bottom: 3px;
+
+}
+
 @media (max-width: 900px) {
     .places {
         flex-direction: column;
@@ -1338,11 +1417,9 @@ button.yes-btn {
         width: 100%;
     }
 }
-    .places-with-ratings {
-        grid-template-columns: 1fr 1fr;
-    }
 
-    
+
+
 
 @media (max-width: 576px) {
     .places-with-ratings {
@@ -1379,7 +1456,7 @@ button.yes-btn {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+
         align-items: center;
         gap: 40px;
 
@@ -1404,7 +1481,7 @@ button.yes-btn {
 
     .tabletnav-container.active {
         transform: translateX(0);
-        
+
         z-index: 500;
     }
 
@@ -1510,6 +1587,25 @@ button.yes-btn {
         text-align: center;
     }
 
+    .main-texts p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width:800px) {
+    .places-with-ratings {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .result-card h4 {
+
+        min-height: 70px;
+    }
+
+    .main-texts h1 {
+        font-size: 2.5rem;
+    }
+
 }
 
 @media (max-width:576px) {
@@ -1517,6 +1613,9 @@ button.yes-btn {
         display: none;
     }
 
+    .places-with-ratings {
+        grid-template-columns: 1fr;
+    }
 
     .main-texts {
         align-items: left;
@@ -1534,6 +1633,9 @@ button.yes-btn {
         font-size: 2.5rem;
     }
 
+    .main-texts p {
+        font-size: 0.7rem;
+    }
 
     .fullscreen-page p {
         font-size: 0.9rem;
@@ -1543,7 +1645,8 @@ button.yes-btn {
     .collection-grid {
         grid-template-columns: 1fr;
     }
-    .Special-text{
+
+    .Special-text {
         font-size: 3rem;
     }
 }

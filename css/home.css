@@ -9,6 +9,7 @@ html,
 body {
     min-width: 320px;
     overflow-x: auto;
+    scrollbar-width: none;
 }
 
 .main-layout {
@@ -727,25 +728,16 @@ section {
     color: #666;
 }
 
-/* --- RESPONSIVE: PAGE CONTENT & LAYOUT (Max-Width: 900px) --- */
 @media (max-width: 900px) {
 
-    /* 1. Main Layout Grid Fix */
-    .main-layout {
-        /* Switch from fixed row heights to auto flow */
-        grid-template-rows: minmax(100vh, auto) auto;
-    }
+    
 
-    /* 2. Home Page: Search & Destinations */
     .destination-grid {
         grid-template-columns: 1fr 1fr;
-        /* 2 columns on tablet */
     }
 
-    /* 3. Home Page: Easy Travel Section */
     .easy-container {
         grid-template-columns: 1fr;
-        /* Stack text over image */
         text-align: center;
     }
 
@@ -761,10 +753,10 @@ section {
 
     .easy-visual {
         order: -1;
-        /* Puts image on top of text */
+
     }
 
-    /* 4. Footer Adjustments */
+
     .site-footer {
         grid-row: auto;
     }
@@ -936,8 +928,8 @@ section {
         justify-content: center;
         flex-wrap: wrap;
         width: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
         max-width: 600px;
     }
     .main-texts h1{
