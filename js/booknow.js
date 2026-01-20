@@ -42,11 +42,13 @@ resultsNumber[1].addEventListener('click', (e) => {
     results[0].classList.remove('hidden');
     results[1].classList.add('hidden');
     results[2].classList.add('hidden');
+    results[3].classList.add('hidden');
 
 
     resultsNumber[1].classList.add('active');
     resultsNumber[2].classList.remove('active');
     resultsNumber[3].classList.remove('active');
+    resultsNumber[4].classList.remove('active');
     showing.innerText = '01';
 });
 
@@ -56,10 +58,12 @@ resultsNumber[2].addEventListener('click', (e) => {
     results[0].classList.add('hidden');
     results[1].classList.remove('hidden');
     results[2].classList.add('hidden');
+    results[3].classList.add('hidden');
 
     resultsNumber[1].classList.remove('active');
     resultsNumber[2].classList.add('active');
     resultsNumber[3].classList.remove('active');
+    resultsNumber[4].classList.remove('active');
     showing.innerText = '02';
 });
 
@@ -70,11 +74,13 @@ resultsNumber[3].addEventListener('click', (e) => {
     results[0].classList.add('hidden');
     results[1].classList.add('hidden');
     results[2].classList.remove('hidden');
+    results[3].classList.add('hidden');
 
 
     resultsNumber[1].classList.remove('active');
     resultsNumber[2].classList.remove('active');
     resultsNumber[3].classList.add('active');
+    resultsNumber[4].classList.remove('active');
     showing.innerText = '03';
 });
 resultsNumber[4].addEventListener('click', (e) => {
