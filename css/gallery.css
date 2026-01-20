@@ -811,18 +811,27 @@ button.yes-btn {
     gap: 10px;
     color: #555;
 }
-
+.contact-list li p {
+    overflow-wrap: anywhere; 
+    word-break: break-word;  
+        
+}
 .social-icons {
     display: flex;
     gap: 10px;
     margin-top: 10px;
 }
+.socials{
+    width: 20px;
+    height:20px;
+}
 
 .social-circle {
     width: 35px;
     height: 35px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     color: white;
+    border: #000 1px solid;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -883,14 +892,13 @@ button.yes-btn {
 
   
 
-    .tabletnav-container {
+ .tabletnav-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        visibility: hidden;
         align-items: center;
         gap: 40px;
-
+        /* visibility: hidden;  */
 
         position: fixed;
         top: 0;
@@ -900,10 +908,8 @@ button.yes-btn {
         background-color: black;
         z-index: 99;
 
-
         transform: translateX(100%);
         transition: transform 0.4s ease-in-out;
-
         overflow-y: auto;
         padding-top: 60px;
         padding-bottom: 20px;

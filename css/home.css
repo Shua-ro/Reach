@@ -505,7 +505,7 @@ section {
     color: #666;
 }
 
-/* --- SECTION 3: EASY TRAVEL --- */
+
 .section-easy {
     background-color: #fff;
     padding-top: 20px;
@@ -576,9 +576,7 @@ section {
 
 .site-footer {
     grid-row: 5;
-    /* This places it after the black section */
     background-color: #E5E5E5;
-    /* Light grey background like image */
     color: #333;
     padding: 60px clamp(20px, 5vw, 50px) 20px;
     font-size: 0.9rem;
@@ -593,10 +591,10 @@ section {
     gap: 40px;
     padding-bottom: 40px;
     border-bottom: 1px solid #ccc;
-    /* The line separating the bottom bar */
+    
 }
 
-/* Columns */
+/* Columns for footer*/
 .footer-columns {
     flex: 1;
     min-width: 160px;
@@ -605,7 +603,7 @@ section {
     gap: 20px;
 }
 
-/* Specific Width for the first column (Logo/Subscribe) */
+
 .brand-col {
     flex: 1.5;
     min-width: 250px;
@@ -638,11 +636,10 @@ section {
 
 .footer-columns ul li a:hover {
     color: #EF3D3D;
-    /* Brand Red Hover */
     padding-left: 5px;
 }
 
-/* Subscribe Form Styling */
+/* Subscribe Form on Footer Styling */
 .foot-form {
     display: flex;
     flex-direction: column;
@@ -687,12 +684,16 @@ section {
     gap: 10px;
     margin-top: 10px;
 }
-
+.socials{
+    width: 20px;
+    height:20px;
+}
 .social-circle {
     width: 35px;
     height: 35px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     color: white;
+    border: #000 1px solid;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -726,6 +727,11 @@ section {
 .bottom-links a {
     text-decoration: none;
     color: #666;
+}
+.contact-list li p {
+    overflow-wrap: anywhere; 
+    word-break: break-word;  
+        
 }
 
 @media (max-width: 900px) {
@@ -773,7 +779,7 @@ section {
         text-align: center;
     }
 
-    /* 5. Legacy/About Page Elements (If used on Home) */
+    
     .third-row {
         grid-row: auto;
     }
@@ -790,6 +796,7 @@ section {
         padding: 30px;
     }
 }
+
 
 @media (max-width: 900px) {
 
